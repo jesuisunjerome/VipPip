@@ -95,6 +95,7 @@ body::-webkit-scrollbar-thumb {
     min-width: 350px;
     display: flex;
     background: #EF8100;
+    display: none;
 }
 
 #navPrincipal input.form-control {
@@ -234,9 +235,13 @@ main .card p {
     font-weight: bold;
 }
 
+
+
 @media screen and (max-width:768px) {
     #rightSidebar {
-        display: none;
+        position: absolute;
+        right: 0;
+        transform: translateX(100%);
     }
 
     .card-img {
@@ -248,5 +253,50 @@ main .card p {
     .card-img-top {
         height: 200px;
         object-fit: cover;
+    }
+
+    #sidebar {
+        width: 100vw;
+        z-index: 10000;
+        position: fixed;
+        bottom: 0;
+    }
+
+    #sidebar nav {
+        flex-direction: row !important;
+        justify-content: space-between;
+        z-index: 1020;
+    }
+
+    #sidebar .nav-link i {
+        font-size: 1.7rem;
+    }
+
+    #sidebar .nav-link {
+        padding: .5rem;
+        width: 16.20%;
+    }
+
+    #sidebar .nav-link span {
+        display: none !important;
+    }
+
+    #sidebar .logo {
+        display: none;
+    }
+
+    #navPrincipal .buscadorPrincipal {
+        min-width: 40%;
+    }
+
+    .likes {
+        font-size: 1.5rem;
+    }
+
+    .notificacion {
+        top: 3px;
+        height: 20px;
+        width: 20px;
+        font-size: 10px !important;
     }
 }
