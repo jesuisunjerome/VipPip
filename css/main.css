@@ -1,0 +1,252 @@
+:root {
+    --orange-color: #FD8900 !important;
+    --color-principal: #6F3C3C !important;
+    --color-secondary: rgba(111, 60, 60, .76) !important;
+    --color-tertiary: #C89696 !important;
+    --grey-color: #ECF0F1 !important;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    color: var(--color-secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-principal);
+}
+
+#sidebar,
+#navPrincipal li span {
+    font-size: 14px;
+}
+
+#sidebar {
+    background: var(--orange-color);
+    width: 100px;
+    /*    height: 100vh;*/
+    overflow-y: auto;
+    text-align: center;
+}
+
+#sidebar::-webkit-scrollbar {
+    display: none;
+    /*    width: .2em;*/
+}
+
+#sidebar .logo {
+    background: var(--color-tertiary);
+    color: #fff;
+    font-size: 2.5rem;
+    position: sticky;
+    top: 0;
+    height: 65px;
+}
+
+#sidebar .nav-link {
+    color: var(--grey-color);
+    padding: 1rem 0;
+    transition: background .5s ease-out;
+}
+
+#sidebar .nav-link i {
+    font-size: 2rem;
+}
+
+#sidebar .nav-link.active,
+#sidebar .nav-link:hover {
+    background: #fff;
+    color: var(--color-principal);
+}
+
+#sidebar .nav-link span {
+    display: none;
+}
+
+#sidebar .nav-link:hover span,
+#sidebar .nav-link.active span {
+    display: block;
+}
+
+#navPrincipal {
+    background: var(--orange-color);
+    height: 65px;
+    color: var(--grey-color);
+}
+
+#navPrincipal .nav-link {
+    color: var(--grey-color);
+    font-size: 1.5rem;
+}
+
+#navPrincipal .buscadorPrincipal {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    min-width: 350px;
+    display: flex;
+    background: #EF8100;
+}
+
+#navPrincipal input.form-control {
+    color: var(--grey-color);
+}
+
+#navPrincipal input.form-control::placeholder,
+#btnBuscar {
+    color: var(--grey-color);
+    opacity: .8;
+}
+
+#btnBuscar {
+    position: absolute;
+    font-size: 2rem;
+    right: 4%;
+    padding: 0 !important;
+}
+
+.avatar {
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.notificacion {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background: var(--color-principal);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    padding-bottom: 49px;
+}
+
+#contenidoPrincipal .card {
+    margin-bottom: 1.3rem;
+}
+
+#contenidoPrincipal .card:last-child {
+    margin-bottom: inherit;
+}
+
+#kontPopile {
+    background: rgba(236, 240, 241, .41);
+    text-align: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 100vh;
+    position: sticky;
+    top: 5px;
+}
+
+.kont {
+    background: rgba(239, 129, 0, .10);
+    border-top-left-radius: 30px;
+}
+
+.titKont {
+    background: rgba(239, 129, 0, .36);
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+main .card {
+    background: rgba(236, 240, 241, .41);
+    /*border-top-left-radius: 30px;
+    border-top-right-radius: 30px;*/
+}
+
+.perfilPublicacion {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.perfilPublicacion .text-light {
+    font-size: .8rem;
+    letter-spacing: 1.5px;
+}
+
+#contenidoPrincipal .card .perfilPublicacion p:first-child {
+    text-shadow: 1px 1px 4px #000;
+}
+
+#contenidoPrincipal .card .perfilPublicacion p:first-child {
+    text-shadow: 1px 1px 4px #000;
+}
+
+main .card p {
+    font-size: .9rem;
+}
+
+.card-img {
+    min-height: 100px;
+    object-fit: unset;
+}
+
+.likes {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #ccc;
+}
+
+.likes:hover {
+    color: var(--color-secondary);
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+.precio {
+    position: absolute;
+    bottom: 0;
+    background: var(--color-secondary);
+    margin-bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: .9rem;
+    font-weight: bold;
+}
+
+@media screen and (max-width:768px) {
+    #rightSidebar {
+        display: none;
+    }
+
+    .card-img {
+        max-width: 100%;
+        height: auto;
+        object-fit: fill;
+    }
+
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
+}
