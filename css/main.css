@@ -301,4 +301,8 @@ main .card p {
         width: 20px;
         font-size: 10px !important;
     }
+    
+    #content{
+        margin-bottom: 65px;
+    }
 }
