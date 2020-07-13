@@ -143,6 +143,7 @@ body::-webkit-scrollbar-thumb {
     overflow-x: hidden;
     height: 100vh;
     padding-bottom: 49px;
+    margin-bottom: 1px;
 }
 
 #contenidoPrincipal .card {
@@ -239,9 +240,10 @@ main .card p {
 
 @media screen and (max-width:768px) {
     #rightSidebar {
-        position: absolute;
+        /*        position: absolute;
         right: 0;
-        transform: translateX(100%);
+        transform: translateX(100%);*/
+        display: none;
     }
 
     .card-img {
