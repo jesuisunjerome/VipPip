@@ -38,7 +38,8 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
-#sidebar::-webkit-scrollbar {
+#sidebar::-webkit-scrollbar,
+#profileStatus::-webkit-scrollbar {
     display: none;
     /*    width: .2em;*/
 }
@@ -82,6 +83,11 @@ body::-webkit-scrollbar-thumb {
     height: 65px;
     color: var(--grey-color);
 }
+
+#navPrincipal .dropdown-toggle::after {
+    display: none !important;
+}
+
 
 #navPrincipal .nav-link {
     color: var(--grey-color);
@@ -175,6 +181,19 @@ body::-webkit-scrollbar-thumb {
     font-weight: bold;
 }
 
+#profileStatus {
+    overflow-x: auto;
+}
+
+.imgStatus {
+    height: 200px;
+    width: 100%;
+    border: 3px solid var(--color-secondary);
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
 main .card {
     background: rgba(236, 240, 241, .41);
     /*border-top-left-radius: 30px;
@@ -190,10 +209,6 @@ main .card {
 .perfilPublicacion .text-light {
     font-size: .8rem;
     letter-spacing: 1.5px;
-}
-
-#contenidoPrincipal .card .perfilPublicacion p:first-child {
-    text-shadow: 1px 1px 4px #000;
 }
 
 #contenidoPrincipal .card .perfilPublicacion p:first-child {
@@ -241,6 +256,7 @@ main .card p {
     height: 100%;
 }
 
+
 @media screen and (max-width:768px) {
     body::-webkit-scrollbar {
         display: none;
@@ -274,7 +290,8 @@ main .card p {
         transform: translateX(0);
     }
 
-    #kontPopile {
+    #kontPopile,
+    .kont {
         border-top-right-radius: 30px;
     }
 
@@ -293,6 +310,16 @@ main .card p {
         width: 100vw;
         z-index: 10000;
         position: fixed;
+        transition: bottom 0.3s;
+        bottom: 0;
+    }
+
+
+    #sidebar.down {
+        bottom: -65px;
+    }
+
+    #sidebar.up {
         bottom: 0;
     }
 
@@ -319,11 +346,6 @@ main .card p {
         display: none;
     }
 
-    /*
-    #navPrincipal .buscadorPrincipal {
-        width: 100%;
-    }*/
-
     .likes {
         font-size: 1.5rem;
     }
@@ -336,6 +358,6 @@ main .card p {
     }
 
     #content {
-        padding-bottom: 190px !important;
+        padding-bottom: 70px !important;
     }
 }
