@@ -242,6 +242,11 @@ main .card p {
 }
 
 @media screen and (max-width:768px) {
+    body::-webkit-scrollbar {
+        display: none;
+        /*    width: .2em;*/
+    }
+
     #lbtnFollowers {
         position: absolute;
         top: 66px;
@@ -331,6 +336,6 @@ main .card p {
     }
 
     #content {
-        padding-bottom: 90px !important;
+        padding-bottom: 190px !important;
     }
 }
