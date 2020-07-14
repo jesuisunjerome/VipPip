@@ -62,18 +62,16 @@
             <!--ENCABEZADO-->
             <nav id="navPrincipal" class="navbar navbar-expand z-depth-0 sticky-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.html">
                         <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="30" alt="mdb logo">
                     </a>
-                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="buscadorPrincipal pl-3">
-                        <input class="form-control bg-transparent border-0 h-100 rounded-0" type="search" placeholder="Lorem ipsum" aria-label="Search">
-                        <button id="btnBuscar" class="btn z-depth-0" type="submit"><i class="ri-search-line"></i></button>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <div class="collapse navbar-collapse" id="baChache">
                         <ul class="navbar-nav ml-auto nav-flex-icons flex-center">
+                            <li class="nav-item mr-3">
+                                <a class="nav-link waves-effect waves-light" id="btnSearch">
+                                    <i class="ri-search-line"></i>
+                                </a>
+                            </li>
                             <li class="nav-item mr-3">
                                 <a class="nav-link waves-effect waves-light">
                                     <span class="notificacion">2</span>
@@ -103,6 +101,18 @@
                                 </a>
                             </li>
                         </ul>
+                        <div class="buscadorPrincipal pl-3 ml-auto d-none">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <!--                                    <span><i class="ri-close-fill"></i></span>-->
+                                    <button class="btn z-depth-0" id="btnCloseBaChache">
+                                        <i class="ri-close-fill h3"></i>
+                                    </button>
+                                </div>
+                                <input class="form-control bg-transparent border-0 h-100 rounded-0" type="search" placeholder="Lorem ipsum" aria-label="Search">
+                                <!--                                <button id="btnBuscar" class="btn z-depth-0 d-none" type="submit"><i class="ri-search-line"></i></button>-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -113,6 +123,9 @@
                 <!--CONTENIDO PRINCIPAL-->
                 <main class="py-5">
                     <div class="container-fluid">
+                        <a href="#" id="lbtnFollowers" class="d-none px-2">
+                            <i class="ri-dashboard-fill"></i>
+                        </a>
                         <div class="row">
                             <div class="col-md-7 mx-auto">
                                 <div class="row">
@@ -244,27 +257,33 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-lg-3 p-0">
+                            <div class="col-md-4 col-sm-6 col-lg-3 p-0" id="rightSidebar">
                                 <div id="kontPopile">
                                     <div class="kont container p-0">
                                         <div class="row py-4 px-3">
-                                            <div class="col-4 mb-5">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
+                                            <div class="col-4 mb-3">
+                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Bethlie Morisset</div>
                                             </div>
-                                            <div class="col-4 mb-5">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
+                                            <div class="col-4 mb-3">
+                                                <img src="https://images.unsplash.com/photo-1469198461748-5d21da152cf7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Orlando Appolon</div>
                                             </div>
-                                            <div class="col-4 mb-5">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
-                                            </div>
-                                            <div class="col-4">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
+                                            <div class="col-4 mb-3">
+                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Lorema Ipsum</div>
                                             </div>
                                             <div class="col-4">
-                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60">
+                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Ralph Exy</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <img src="https://images.unsplash.com/photo-1569128783065-5eec48d87247?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Lorema Ipsum</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="avatar rounded-circle z-depth-0" alt="avatar image" height="60" width="60">
+                                                <div class="d-block">Bency Ox</div>
                                             </div>
                                         </div>
                                         <div class="py-2 titKont">

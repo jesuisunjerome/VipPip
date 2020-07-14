@@ -90,12 +90,12 @@ body::-webkit-scrollbar-thumb {
 
 #navPrincipal .buscadorPrincipal {
     position: absolute;
-    left: 0;
+    right: 0;
     height: 100%;
-    min-width: 350px;
+    min-width: 100%;
     display: flex;
     background: #EF8100;
-    display: none;
+    /*display: none;*/
 }
 
 #navPrincipal input.form-control {
@@ -239,11 +239,35 @@ main .card p {
 
 
 @media screen and (max-width:768px) {
+    #lbtnFollowers {
+        position: absolute;
+        top: 66px;
+        right: 4%;
+        color: var(--color-principal);
+        font-size: 2rem;
+        display: block !important;
+        z-index: 1040;
+        background: #fff;
+    }
+
     #rightSidebar {
-        /*        position: absolute;
+        position: fixed;
         right: 0;
-        transform: translateX(100%);*/
-        display: none;
+        background: #fff;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        padding: 10px !important;
+        transform: translateX(100%);
+        transition: all .5s ease-in-out;
+    }
+
+    #rightSidebar.showMobile {
+        display: block;
+        transform: translateX(0);
+    }
+
+    #kontPopile {
+        border-top-right-radius: 30px;
     }
 
     .card-img {
@@ -301,8 +325,8 @@ main .card p {
         width: 20px;
         font-size: 10px !important;
     }
-    
-    #content{
-        margin-bottom: 65px;
+
+    #content {
+        padding-bottom: 90px !important;
     }
 }
