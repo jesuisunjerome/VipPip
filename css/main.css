@@ -92,7 +92,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     right: 0;
     height: 100%;
-    min-width: 100%;
+    width: 100%;
     display: flex;
     background: #EF8100;
     /*display: none;*/
@@ -236,7 +236,10 @@ main .card p {
     font-weight: bold;
 }
 
-
+#btnCloseBaChache:hover {
+    background: rgba(255, 255, 255, .5);
+    height: 100%;
+}
 
 @media screen and (max-width:768px) {
     #lbtnFollowers {
@@ -311,9 +314,10 @@ main .card p {
         display: none;
     }
 
+    /*
     #navPrincipal .buscadorPrincipal {
-        min-width: 40%;
-    }
+        width: 100%;
+    }*/
 
     .likes {
         font-size: 1.5rem;
