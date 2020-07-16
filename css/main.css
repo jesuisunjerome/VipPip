@@ -33,13 +33,14 @@ body::-webkit-scrollbar-thumb {
 #sidebar {
     background: var(--orange-color);
     width: 100px;
-    /*    height: 100vh;*/
+    height: 100vh;
     overflow-y: auto;
     text-align: center;
 }
 
 #sidebar::-webkit-scrollbar,
-#profileStatus::-webkit-scrollbar {
+#profileStatus::-webkit-scrollbar,
+.notificaciones .card-body::-webkit-scrollbar {
     display: none;
     /*    width: .2em;*/
 }
@@ -88,6 +89,49 @@ body::-webkit-scrollbar-thumb {
     display: none !important;
 }
 
+#navPrincipal .avatar.dropdown .nav-link.dropdown-toggle {
+    border-radius: 50%;
+}
+
+#navPrincipal .dropdown-menu {
+    right: 0;
+    left: inherit !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+#navPrincipal .dropdown-menu .dropdown-item,
+.dropdown-menu .dropdown-item {
+    font-size: .9rem;
+    color: var(--color-secondary);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #fff;
+}
+
+.notificaciones {
+    width: 20rem;
+}
+
+.notificaciones .card-body {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.notificaciones .card-header {
+    color: #fff;
+    background: var(--color-secondary);
+}
+
+.notificaciones .card-footer a {
+    color: var(--color-principal) !important;
+}
+
+.notificaciones .dropdown-item {
+    white-space: inherit;
+}
 
 #navPrincipal .nav-link {
     color: var(--grey-color);
@@ -185,6 +229,21 @@ body::-webkit-scrollbar-thumb {
     overflow-x: auto;
 }
 
+#profileStatus .view {
+    border-radius: 20px;
+}
+
+#profileStatus .view a {
+    color: var(--color-principal) !important;
+}
+
+.profileStatus {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    transform: translateX(-45%);
+}
+
 .imgStatus {
     height: 200px;
     width: 100%;
@@ -257,6 +316,7 @@ main .card p {
 }
 
 
+
 @media screen and (max-width:768px) {
     body::-webkit-scrollbar {
         display: none;
@@ -270,7 +330,7 @@ main .card p {
         color: var(--color-principal);
         font-size: 2rem;
         display: block !important;
-        z-index: 1040;
+        z-index: 1;
         background: #fff;
     }
 
@@ -312,6 +372,7 @@ main .card p {
         position: fixed;
         transition: bottom 0.3s;
         bottom: 0;
+        height: auto;
     }
 
 
