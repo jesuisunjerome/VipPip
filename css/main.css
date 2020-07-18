@@ -173,8 +173,9 @@ body::-webkit-scrollbar-thumb {
 
 #publicacionHome {
     border: 2px solid;
-    min-height: 150px;
-    max-height: 400px;
+    height: 120px;
+    /*    min-height: 150px;
+    max-height: 400px;*/
     overflow-y: auto;
     border-radius: 15px;
     position: relative;
@@ -204,6 +205,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: -15%;
     left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
