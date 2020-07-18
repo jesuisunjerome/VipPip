@@ -40,9 +40,9 @@ body::-webkit-scrollbar-thumb {
 
 #sidebar::-webkit-scrollbar,
 #profileStatus::-webkit-scrollbar,
-.notificaciones .card-body::-webkit-scrollbar {
+.notificaciones .card-body::-webkit-scrollbar,
+#publicacionHome textarea::-webkit-scrollbar {
     display: none;
-    /*    width: .2em;*/
 }
 
 #sidebar .logo {
@@ -169,6 +169,54 @@ body::-webkit-scrollbar-thumb {
     border: 2px solid #FFFFFF;
     border-radius: 50%;
     object-fit: cover;
+}
+
+#publicacionHome {
+    border: 2px solid;
+    min-height: 150px;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 15px;
+    position: relative;
+    background: rgba(236, 240, 241, .41);
+}
+
+#publicacionHome textarea {
+    background: transparent;
+    max-height: 50px;
+    min-height: 50px;
+}
+
+#publicacionHomeOption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(239, 129, 0, .10);
+    font-size: 1.6rem;
+    color: var(--color-principal);
+}
+
+.avatarPublicacion {
+    border: 1px solid var(--color-principal);
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    z-index: 1;
+}
+
+#btnPibliye {
+    color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    border-radius: 55px;
+    font-weight: bold;
+}
+
+#btnPibliye:hover {
+    background: var(--orange-color);
+    color: #fff;
 }
 
 .form-control:focus {
