@@ -469,4 +469,8 @@ main .card p {
     #content {
         padding-bottom: 70px !important;
     }
+
+    #navPrincipal li.dropdown {
+        position: inherit;
+    }
 }
