@@ -41,7 +41,8 @@ body::-webkit-scrollbar-thumb {
 #sidebar::-webkit-scrollbar,
 #profileStatus::-webkit-scrollbar,
 .notificaciones .card-body::-webkit-scrollbar,
-#publicacionHome textarea::-webkit-scrollbar {
+#publicacionHome textarea::-webkit-scrollbar,
+#blogTopMobileContent::-webkit-scrollbar {
     display: none;
 }
 
@@ -367,6 +368,136 @@ main .card p {
 
 
 
+
+
+
+
+/***********************************************************
+BLOG
+***********************************************************/
+#blogContent .card,
+#blogTopContent .card {
+    background: #fff;
+    box-shadow: none;
+    transition: all .3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+#blogContent .card:last-child,
+#blogTopContent .card:last-child {
+    margin-bottom: inherit;
+}
+
+#blogContent .card:hover {
+    border-radius: 15px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+#blogContent .card::before {
+    content: "";
+    position: absolute;
+    background: var(--color-principal);
+    z-index: -1;
+    border-bottom-left-radius: 20px;
+}
+
+#blogContent .card:hover::before {
+    animation: animCard 1s both;
+}
+
+@keyframes animCard {
+    10% {
+        bottom: -10px;
+        left: -10px;
+        height: 0%;
+        width: 0%;
+    }
+
+    50% {
+        bottom: -10px;
+        left: -10px;
+        height: 35%;
+        width: 20%;
+    }
+
+    100% {
+        bottom: -10px;
+        left: -10px;
+        height: 30%;
+        width: 10%;
+    }
+}
+
+#blogContent .card-img-top {
+    height: 170px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#blogContent .card-title,
+#blogTopContent .card-title {
+    color: var(--color-principal);
+    font-size: 1.3rem;
+}
+
+#blogContent .card-text,
+#blogTopContent .card-text {
+    color: var(--color-tertiary);
+}
+
+.card-text-resume {
+    color: var(--color-secondary);
+    font-size: 1rem !important;
+    line-height: 26px;
+    margin-bottom: 0;
+}
+
+#blogTopTitle {
+    background: var(--color-principal);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#blogTopContent .card-img-top {
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.vistasTop {
+    position: absolute;
+    z-index: 1;
+    background: var(--color-secondary);
+    color: var(--grey-color);
+    left: -100%;
+    border-bottom-right-radius: 0;
+    top: 0;
+}
+
+#blogTopContent .card:hover .vistasTop {
+    animation: animCardTop5 1s both;
+}
+
+@keyframes animCardTop5 {
+    0 {
+        left: -100%;
+    }
+
+    50% {
+        left: 5%;
+    }
+
+    100% {
+        left: 0%;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+
 @media screen and (max-width:768px) {
     body::-webkit-scrollbar {
         display: none;
@@ -474,5 +605,58 @@ main .card p {
 
     #navPrincipal li.dropdown {
         position: inherit;
+    }
+
+
+    #blogContent img.card-img-top {
+        border-radius: 5px;
+        height: 200px;
+    }
+
+    @keyframes animCard {
+        10% {
+            bottom: -10px;
+            left: -10px;
+            height: 0%;
+            width: 0%;
+        }
+
+        50% {
+            bottom: -10px;
+            left: -10px;
+            height: 35%;
+            width: 25%;
+        }
+
+        100% {
+            bottom: -10px;
+            left: -10px;
+            height: 30%;
+            width: 20%;
+        }
+    }
+
+    #blogTopContent {
+        position: relative;
+        height: 75vh;
+    }
+
+    #blogTopTitle {
+        position: relative;
+        top: inherit;
+    }
+
+    #blogTopContent .card-img-top {
+        border-radius: 5px;
+        height: 250px;
+    }
+
+    #blogTopMobileContent {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    #blogTopMobileContent .card {
+        margin-right: 1.5rem;
     }
 }
