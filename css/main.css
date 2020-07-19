@@ -453,7 +453,7 @@ BLOG
     margin-bottom: 0;
 }
 
-#blogTopTitle {
+.blogTopTitle {
     background: var(--color-principal);
     color: #fff;
     position: sticky;
@@ -640,9 +640,9 @@ BLOG
         position: relative;
     }
 
-    #blogTopTitle {
-        position: relative;
-        top: inherit;
+    .blogTopTitle {
+        background: #fff;
+        color: var(--orange-color);
     }
 
     #blogTopContent .card-img-top {
@@ -657,7 +657,5 @@ BLOG
 
     #blogTopMobileContent .card {
         margin-right: 1.5rem;
-        height:100%;
-        margin-bottom:2rem;
     }
 }
