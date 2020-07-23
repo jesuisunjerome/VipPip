@@ -547,10 +547,6 @@ TRAVAY
     height: 60vh;
 }
 
-#heroSection .input-group i {
-    font-size: 1.5rem;
-}
-
 #heroSection .form-control,
 #heroSection .input-group-text,
 #heroSection .form-control::placeholder {
@@ -716,5 +712,10 @@ MEDIA QUERIES
         height: 20px;
         width: 20px;
         font-size: 10px !important;
+    }
+
+    #heroSection,
+    #heroSection .view {
+        height: 75vh;
     }
 }
