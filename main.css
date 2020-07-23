@@ -770,6 +770,10 @@ MEDIA QUERIES
         height: 50vh;
     }
 
+    .carousel-indicators {
+        display: none;
+    }
+
     .card-img {
         max-width: 100%;
         height: auto;
