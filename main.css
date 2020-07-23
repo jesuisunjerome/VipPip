@@ -670,7 +670,7 @@ MEDIA QUERIES
         z-index: 10000;
         position: fixed;
         transition: bottom 0.3s;
-        bottom: 10px;
+        bottom: 0;
         height: auto;
         top: inherit;
         left: inherit;
@@ -681,7 +681,7 @@ MEDIA QUERIES
     }
 
     #sidebar.up {
-        bottom: 10px;
+        bottom: 0;
     }
 
     #sidebar nav {
