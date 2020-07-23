@@ -8,26 +8,29 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Vip Pip</title>
+    <title>Vip Pip - Travay</title>
 
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="apple-touch-icon" href="">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-
-    <div class="d-flex">
-
-        <!--SIDEBAR-->
-        <div id="sidebar" class="z-depth-1">
+    <div class="wrapper">
+        <!-- SIDEBAR  -->
+        <nav id="sidebar" class="z-depth-1">
+            <!--Logo-->
             <div class="logo">
-                <i class="ri-menu-4-fill"></i>
+                <a class="d-block" href="index.html">
+                    <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="40" alt="Vip Pip logo">
+                </a>
             </div>
+
             <nav class="nav flex-column">
                 <a class="nav-link" href="index.html">
                     <i class="ri-home-2-line"></i>
@@ -37,11 +40,11 @@
                     <i class="ri-newspaper-line"></i>
                     <span class="animated fadeInUp">Blòg</span>
                 </a>
-                <a class="nav-link" href="travay.html">
+                <a class="nav-link active" href="travay.html">
                     <i class="ri-briefcase-4-fill"></i>
                     <span class="animated fadeInUp">Travay</span>
                 </a>
-                <a class="nav-link active" href="machin.html">
+                <a class="nav-link" href="machin.html">
                     <i class="ri-roadster-fill"></i>
                     <span class="animated fadeInUp">Machin</span>
                 </a>
@@ -54,17 +57,21 @@
                     <span class="animated fadeInUp">Gerit</span>
                 </a>
             </nav>
-        </div>
-        <!--./SIDEBAR-->
+        </nav>
 
 
-        <div class="w-100">
-            <!--ENCABEZADO-->
+        <div id="content">
             <nav id="navPrincipal" class="navbar navbar-expand z-depth-0 sticky-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="30" alt="Vip Pip logo">
+                    <a class="navbar-brand d-md-none" href="#">
+                        <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="40" class="d-inline-block" alt="Vip Pip logo">
                     </a>
+                    <button id="sidebarCollapse" class="navbar-btn d-md-block d-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
                     <div class="collapse navbar-collapse" id="baChache">
                         <ul class="navbar-nav ml-auto nav-flex-icons flex-center">
                             <li class="nav-item mr-3">
@@ -108,7 +115,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -148,7 +155,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -212,7 +219,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -244,275 +251,218 @@
                         <div class="buscadorPrincipal ml-auto d-none animated headShake">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <!--                                    <span><i class="ri-close-fill"></i></span>-->
                                     <button class="btn z-depth-0 m-0" id="btnCloseBaChache">
                                         <i class="ri-close-fill h3"></i>
                                     </button>
                                 </div>
                                 <input class="form-control bg-transparent border-0 h-100 rounded-0" type="search" placeholder="Lorem ipsum" aria-label="Search">
-                                <!--                                <button id="btnBuscar" class="btn z-depth-0 d-none" type="submit"><i class="ri-search-line"></i></button>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-            <!--./ENCABEZADO-->
 
+            <main class="pb-2 pb-md-0">
+                <nav class="navbar navbar-expand-lg bg-white py-lg-0" id="navSecondary">
+                    <div class="container">
+                        <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i class="ri-menu-2-fill"></i>
+                            </span>
+                        </button>
+                        <div class="md-form input-with-pre-icon my-0 mb-2 mr-lg-4">
+                            <svg class="input-prefix" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.47675 12.4627L1.2645 15.6742L2.32575 16.7355L5.53725 13.5232C6.7322 14.4812 8.2185 15.0022 9.75 15C13.476 15 16.5 11.976 16.5 8.25C16.5 4.524 13.476 1.5 9.75 1.5C6.024 1.5 3 4.524 3 8.25C2.99782 9.7815 3.51884 11.2678 4.47675 12.4627ZM5.98125 11.9062C5.02942 10.9274 4.49785 9.61532 4.5 8.25C4.5 5.349 6.84975 3 9.75 3C12.651 3 15 5.349 15 8.25C15 11.1502 12.651 13.5 9.75 13.5C8.38468 13.5021 7.07259 12.9706 6.09375 12.0187L5.98125 11.9062Z" fill="#6F3C3C" />
+                            </svg>
+                            <input type="text" class="form-control py-1 m-0">
+                        </div>
+                        <div class="collapse navbar-collapse" id="collapseNav">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Antrepriz <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Salè</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kourikoulòm</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Avanse</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link waves-effect waves-light d-flex">
+                                        <i class="ri-add-circle-line"></i>
+                                        <span class="pl-1">Ajoute nouvo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
 
-            <div id="content">
-                <!--CONTENIDO PRINCIPAL-->
-                <main class="py-5">
-                    <div class="container-fluid">
-                        <a href="#" id="lbtnFollowers" class="d-none px-2">
-                            <i class="ri-dashboard-fill"></i>
-                        </a>
-                        <div class="row">
-                            <div class="col-md-11 mx-auto">
+                <section id="heroSection">
+                    <div class="view">
+                        <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" class="object-fit">
+                        <div class="mask flex-center rgba-black-light">
+                            <div class="container">
                                 <div class="row">
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
+                                    <div class="col-md-5 mb-4">
+                                        <h4 class="text-white">Kisa w’ap chache?</h4>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-lg border-0" placeholder="Pòs, antrepriz">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text bg-white border-0">
+                                                    <i class="ri-search-line"></i>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
+                                    <div class="col-md-5 mb-4">
+                                        <h4 class="text-white">Nan ki zòn?</h4>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control form-control-lg border-0" placeholder="Pòtoprens, Okay, Dèlma">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text bg-white border-0">
+                                                    <i class="ri-map-pin-line"></i>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1490641815614-b45106d6dd04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1549632891-a0bea6d0355b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=744&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        BMW
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-2">
+                                        <br class="d-md-block d-none">
+                                        <button class="btn btn-lg mx-0 btnCTA">Chache</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </main>
-                <!--./CONTENIDO PRINCIPAL-->
+                </section>
 
-
-                <!--PIE DE PAGINA-->
-                <footer class="page-footer font-small bg-light pt-4">
-                    <div class="container-fluid text-center text-md-left">
+                <section id="statistics">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-6 mt-md-0 mt-3">
-                                <h5 class="text-uppercase">Footer Content</h5>
-                                <p>Here you can use rows and columns to organize your footer content.</p>
-
+                            <div class="col-lg-2 col-12 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">Travay</h6>
                             </div>
-                            <hr class="clearfix w-100 d-md-none pb-3">
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="text-uppercase">Links</h5>
-
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 4</a>
-                                    </li>
-                                </ul>
-
+                            <div class="col-sm-4 col-6 col-lg-2 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">Moun kap vann</h6>
                             </div>
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="text-uppercase">Links</h5>
-
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 4</a>
-                                    </li>
-                                </ul>
+                            <div class="col-sm-4 col-6 col-lg-2 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">ADMINISTRATÈ</h6>
+                            </div>
+                            <div class="col-sm-4 col-6 col-lg-2 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">ENJENYÈ</h6>
+                            </div>
+                            <div class="col-sm-4 col-6 col-lg-2 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">DIREKTÈ</h6>
+                            </div>
+                            <div class="col-sm-4 col-6 col-lg-2 py-4 text-center">
+                                <h3 class="mb-0 orange-color">2500</h3>
+                                <h6 class="mb-0 text-uppercase color-principal">Lot</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-                    </div>
-                </footer>
-                <!--./PIE DE PAGINA-->
+                </section>
 
-            </div>
+
+                <section id="antrepriz" class="mb-md-0 mb-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0 px-0">
+                                <img src="https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="object-fit" alt="">
+                            </div>
+                            <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+                                <div class="p-5">
+                                    <h4 class="text-uppercase">
+                                        Lorem ipsum dolor antrepriz.
+                                    </h4>
+                                    <h5 class="lineHeight">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quis. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                    </h5>
+                                    <button class="btn btn-lg mx-0 btnCTA mt-3">Plis detay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sale" class="mb-md-0 mb-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 order-md-1 mb-4 mb-md-0 px-0">
+                                <img src="https://images.unsplash.com/photo-1427751840561-9852520f8ce8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=755&q=80" class="object-fit" alt="">
+                            </div>
+                            <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+                                <div class="p-5">
+                                    <h4 class="text-uppercase">
+                                        Lorem ipsum dolor sale.
+                                    </h4>
+                                    <h5 class="lineHeight">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quis. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                    </h5>
+                                    <button class="btn btn-lg mx-0 btnCTA mt-3">Plis detay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="zon" class="mb-md-0 mb-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 mb-4 mb-md-0 px-0">
+                                <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" class="object-fit" alt="">
+                            </div>
+                            <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center">
+                                <div class="p-5">
+                                    <h4 class="text-uppercase">
+                                        Lorem ipsum dolor zon ou.
+                                    </h4>
+                                    <h5 class="lineHeight">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, quis. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                                    </h5>
+                                    <button class="btn btn-lg mx-0 btnCTA mt-3">Plis detay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section id="footerTravay" class="py-4">
+                    <div class="container-fluid text-center">
+                        <ul class="nav justify-content-center">
+                            <a class="nav-link" href="#">Politik konfidansyalite</a>
+                            <a class="nav-link" href="#">Enfomasyon prive</a>
+                            <a class="nav-link" href="#">Plan yo</a>
+                            <a class="nav-link" href="#">Kontakte nou</a>
+                        </ul>
+                        <p class="mb-0">
+                            © Tout dwa rezeve - 2020 <a href="index.html">VipPip</a>
+                        </p>
+                    </div>
+                </section>
+
+            </main>
+            <!--./CONTENIDO PRINCIPAL-->
 
         </div>
     </div>
 
-
-
+    <div class="overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+    <script src=main.js></script>
+</body></html>
