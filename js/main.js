@@ -1,43 +1,42 @@
-$("document").ready(function () {
-    mostrarBarra();
-    mostrarMenuMobil();
+ $(document).ready(function () {
+     mostrarBarra();
+     mostrarMenuMobil();
 
-    $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $(this).toggleClass('active');
-    });
-});
+     $('#sidebarCollapse').click(function () {
+         $('#sidebar, #content').toggleClass('active');
+         $(this).toggleClass('active');
+     });
+ });
+
+ function mostrarBarra() {
+     $("#btnSearch").click(function () {
+         $(".buscadorPrincipal").toggleClass("d-none");
+         $("#baChache .navbar-nav").toggleClass("d-none");
+     });
+
+     $("#btnCloseBaChache").click(function () {
+         $(".buscadorPrincipal").toggleClass("d-none");
+         $("#baChache .navbar-nav").toggleClass("d-none");
+     });
+
+     $("#lbtnFollowers").click(function () {
+         $("#rightSidebar").toggleClass("showMobile");
+         $("#sidebar").toggleClass("down");
+     });
+ }
 
 
-function mostrarBarra() {
-    $("#btnSearch").click(function () {
-        $(".buscadorPrincipal").toggleClass("d-none");
-        $("#baChache .navbar-nav").toggleClass("d-none");
-    });
+ function mostrarMenuMobil() {
+     var prevScrollpos = window.pageYOffset;
 
-    $("#btnCloseBaChache").click(function () {
-        $(".buscadorPrincipal").toggleClass("d-none");
-        $("#baChache .navbar-nav").toggleClass("d-none");
-    });
+     window.onscroll = function () {
+         var $height = window.pageYOffset;
 
-    $("#lbtnFollowers").click(function () {
-        $("#rightSidebar").toggleClass("showMobile");
-        $("#sidebar").toggleClass("down");
-    });
-}
-
-
-function mostrarMenuMobil() {
-    var prevScrollpos = $("#content").scrollTop();
-
-    $("#content").scroll(function () {
-        var $height = $("#content").scrollTop();
-
-        if (prevScrollpos > $height) {
-            $("#sidebar").addClass("up").removeClass("down");
-        } else {
-            $("#sidebar").addClass("down").removeClass("up");
-        }
-        prevScrollpos = $height;
-    });
-}
+         if (prevScrollpos > $height) {
+             $("#sidebar").addClass("up").removeClass("down");
+         } else {
+             $("#sidebar").addClass("down").removeClass("up");
+         }
+         prevScrollpos = $height;
+     };
+ }

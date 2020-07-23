@@ -8,26 +8,29 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Vip Pip</title>
+    <title>Vip Pip - Gerit</title>
 
     <link rel="shortcut icon" href="" type="image/x-icon">
     <link rel="apple-touch-icon" href="">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-
-    <div class="d-flex">
-
-        <!--SIDEBAR-->
-        <div id="sidebar" class="z-depth-1">
+    <div class="wrapper">
+        <!-- SIDEBAR  -->
+        <nav id="sidebar" class="z-depth-1">
+            <!--Logo-->
             <div class="logo">
-                <i class="ri-menu-4-fill"></i>
+                <a class="d-block" href="index.html">
+                    <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="40" alt="Vip Pip logo">
+                </a>
             </div>
+
             <nav class="nav flex-column">
                 <a class="nav-link" href="index.html">
                     <i class="ri-home-2-line"></i>
@@ -54,17 +57,21 @@
                     <span class="animated fadeInUp">Gerit</span>
                 </a>
             </nav>
-        </div>
-        <!--./SIDEBAR-->
+        </nav>
 
 
-        <div class="w-100">
-            <!--ENCABEZADO-->
+        <div id="content">
             <nav id="navPrincipal" class="navbar navbar-expand z-depth-0 sticky-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="30" alt="Vip Pip logo">
+                    <a class="navbar-brand d-md-none" href="#">
+                        <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="40" class="d-inline-block" alt="Vip Pip logo">
                     </a>
+                    <button id="sidebarCollapse" class="navbar-btn d-md-block d-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
                     <div class="collapse navbar-collapse" id="baChache">
                         <ul class="navbar-nav ml-auto nav-flex-icons flex-center">
                             <li class="nav-item mr-3">
@@ -108,7 +115,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -148,7 +155,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -212,7 +219,7 @@
                                         </a>
                                     </div>
                                     <div class="card-footer text-center py-1">
-                                        <a href="#" class="d-block">Ver más</a>
+                                        <a href="#" class="d-block">Plis</a>
                                     </div>
                                 </div>
                             </li>
@@ -244,317 +251,348 @@
                         <div class="buscadorPrincipal ml-auto d-none animated headShake">
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <!--                                    <span><i class="ri-close-fill"></i></span>-->
                                     <button class="btn z-depth-0 m-0" id="btnCloseBaChache">
                                         <i class="ri-close-fill h3"></i>
                                     </button>
                                 </div>
                                 <input class="form-control bg-transparent border-0 h-100 rounded-0" type="search" placeholder="Lorem ipsum" aria-label="Search">
-                                <!--                                <button id="btnBuscar" class="btn z-depth-0 d-none" type="submit"><i class="ri-search-line"></i></button>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-            <!--./ENCABEZADO-->
 
-
-            <div id="content">
-                <!--CONTENIDO PRINCIPAL-->
-                <main class="py-5">
-                    <div class="container-fluid">
-                        <a href="#" id="lbtnFollowers" class="d-none px-2">
-                            <i class="ri-dashboard-fill"></i>
+            <main class="pb-2 pb-md-0">
+                <section id="heroSection">
+                    <div id="carouselGerit" class="carousel slide carousel-fade" data-ride="carousel">
+                        <!--Indicators-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselGerit" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselGerit" data-slide-to="1"></li>
+                            <li data-target="#carouselGerit" data-slide-to="2"></li>
+                            <li data-target="#carouselGerit" data-slide-to="3"></li>
+                            <li data-target="#carouselGerit" data-slide-to="4"></li>
+                        </ol>
+                        <!--/.Indicators-->
+                        <!--Slides-->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img class="object-fit" src="Imagenes/Gerit/christian-wiediger-I8-T4lMCA6k-unsplash.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="object-fit" src="Imagenes/Gerit/clark-street-mercantile-P3pI6xzovu0-unsplash.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="object-fit" src="Imagenes/Gerit/korie-cull-IzIME1jwjCY-unsplash.jpg" alt="Third slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="object-fit" src="Imagenes/Gerit/mr-autthaporn-pradidpong-EZt7OJagHyY-unsplash.jpg" alt="Fourth slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="object-fit" src="Imagenes/Gerit/nrd-D6Tu_L3chLE-unsplash.jpg" alt="Fifth slide">
+                            </div>
+                        </div>
+                        <!--/.Slides-->
+                        <!--Controls-->
+                        <a class="carousel-control-prev" href="#carouselGerit" role="button" data-slide="prev">
+                            <span aria-hidden="true">
+                                <i class="ri-arrow-left-s-line"></i>
+                            </span>
+                            <span class="sr-only">Anvan</span>
                         </a>
+                        <a class="carousel-control-next" href="#carouselGerit" role="button" data-slide="next">
+                            <span aria-hidden="true">
+                                <i class="ri-arrow-right-s-line"></i>
+                            </span>
+                            <span class="sr-only">Apre</span>
+                        </a>
+                        <!--/.Controls-->
+                    </div>
+                </section>
+
+                <nav class="navbar navbar-expand-lg bg-white py-lg-0" id="navSecondary">
+                    <div class="container">
+                        <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#collapseNav" aria-controls="collapseNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon">
+                                <i class="ri-menu-2-fill"></i>
+                            </span>
+                        </button>
+                        <div class="md-form input-with-pre-icon my-0 mb-2 mr-lg-4">
+                            <svg class="input-prefix" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.47675 12.4627L1.2645 15.6742L2.32575 16.7355L5.53725 13.5232C6.7322 14.4812 8.2185 15.0022 9.75 15C13.476 15 16.5 11.976 16.5 8.25C16.5 4.524 13.476 1.5 9.75 1.5C6.024 1.5 3 4.524 3 8.25C2.99782 9.7815 3.51884 11.2678 4.47675 12.4627ZM5.98125 11.9062C5.02942 10.9274 4.49785 9.61532 4.5 8.25C4.5 5.349 6.84975 3 9.75 3C12.651 3 15 5.349 15 8.25C15 11.1502 12.651 13.5 9.75 13.5C8.38468 13.5021 7.07259 12.9706 6.09375 12.0187L5.98125 11.9062Z" fill="#6F3C3C" />
+                            </svg>
+                            <input type="text" class="form-control py-1 m-0">
+                        </div>
+                        <div class="collapse navbar-collapse" id="collapseNav">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Lorem ipsum dolor <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nouvote</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Kategori</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sou kategori</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link waves-effect waves-light d-flex">
+                                        <i class="ri-add-circle-line"></i>
+                                        <span class="pl-1">Ajoute nouvo</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <section id="geritList" class="mt-5">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-11 mx-auto">
-                                <div class="row">
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1552346154-21d32810aba3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=343&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum dolor.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=343&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum dolor.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1465479423260-c4afc24172c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1465479423260-c4afc24172c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum dolor.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum dolor.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=401&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum dolor.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum dolor.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/3/www.madebyvadim.com.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=761&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum dolor.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/3/www.madebyvadim.com.jpg?ixlib=rb-1.2.1&auto=format&fit=crop&w=761&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum dolor.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=349&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
-                                    <div class="col-6 col-md-4 mb-4">
-                                        <div class="card z-depth-0 h-100">
-                                            <div class="view overlay">
-                                                <div class="position-relative">
-                                                    <img class="card-img-top" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
-                                                    <h6 class="precio">500,000,000,000.00 HTG</h6>
-                                                </div>
-                                                <div class="card-body">
-                                                    <h6 class="mb-0 font-weight-bold">
-                                                        Lorem ipsum dolor.
-                                                    </h6>
-                                                    <p class="card-text mb-0">
-                                                        <small>Jakmèl, Ayiti</small>
-                                                    </p>
-                                                </div>
-                                                <a href="#!">
-                                                    <div class="mask rgba-teal-slight"></div>
-                                                </a>
-                                            </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4 mb-4">
+                                <div class="card z-depth-0 h-100">
+                                    <div class="view overlay">
+                                        <div class="position-relative">
+                                            <img class="card-img-top" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap">
+                                            <h6 class="precio">500,000,000,000.00 HTG</h6>
                                         </div>
+                                        <div class="card-body">
+                                            <h6 class="mb-0 font-weight-bold">
+                                                Lorem ipsum dolor.
+                                            </h6>
+                                            <p class="card-text mb-0">
+                                                <small>Jakmèl, Ayiti</small>
+                                            </p>
+                                        </div>
+                                        <a href="#!">
+                                            <div class="mask rgba-teal-slight"></div>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </main>
-                <!--./CONTENIDO PRINCIPAL-->
+                </section>
 
-
-                <!--PIE DE PAGINA-->
-                <footer class="page-footer font-small bg-light pt-4">
-                    <div class="container-fluid text-center text-md-left">
-                        <div class="row">
-                            <div class="col-md-6 mt-md-0 mt-3">
-                                <h5 class="text-uppercase">Footer Content</h5>
-                                <p>Here you can use rows and columns to organize your footer content.</p>
-
-                            </div>
-                            <hr class="clearfix w-100 d-md-none pb-3">
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="text-uppercase">Links</h5>
-
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 4</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <div class="col-md-3 mb-md-0 mb-3">
-                                <h5 class="text-uppercase">Links</h5>
-
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <a href="#!">Link 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="#!">Link 4</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                <section id="footerTravay" class="py-4">
+                    <div class="container-fluid text-center">
+                        <ul class="nav justify-content-center">
+                            <a class="nav-link" href="#">Politik konfidansyalite</a>
+                            <a class="nav-link" href="#">Enfomasyon prive</a>
+                            <a class="nav-link" href="#">Plan yo</a>
+                            <a class="nav-link" href="#">Kontakte nou</a>
+                        </ul>
+                        <p class="mb-0">
+                            © Tout dwa rezeve - 2020 <a href="index.html">VipPip</a>
+                        </p>
                     </div>
-                    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-                        <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-                    </div>
-                </footer>
-                <!--./PIE DE PAGINA-->
+                </section>
 
-            </div>
+            </main>
+            <!--./CONTENIDO PRINCIPAL-->
 
         </div>
     </div>
 
-
-
+    <div class="customOverlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
     <script src="js/main.js"></script>
-</body>
-
-</html>
+</body></html>
