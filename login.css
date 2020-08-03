@@ -1,0 +1,170 @@
+:root {
+    --orange-color: #FD8900 !important;
+    --color-principal: #6F3C3C !important;
+    --color-secondary: rgba(111, 60, 60, .76) !important;
+    --color-tertiary: #C89696 !important;
+    --grey-color: #ECF0F1 !important;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    color: var(--color-secondary);
+    background: var(--grey-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-principal);
+}
+
+.orange-color {
+    color: var(--orange-color) !important;
+}
+
+.bg-orange-color {
+    background: var(--orange-color);
+}
+
+.color-principal {
+    color: var(--color-principal);
+}
+
+.bg-color-principal {
+    background: var(--color-principal);
+}
+
+main .row {
+    min-height: 73vh;
+}
+
+main .row .descForm {
+    background: rgba(239, 129, 0, .36);
+    background-size: cover;
+}
+
+main .input-prefix,
+main .form-control::placeholder {
+    color: var(--color-secondary) !important;
+}
+
+main .form-control,
+main .custom-select {
+    background: #c4c4c4 !important;
+    border-radius: 0;
+    color: var(--color-principal);
+    border: none !important;
+}
+
+main .form-control.activeDanger {
+    border: 1px solid #ff3547 !important;
+}
+
+main .form-control.activeSuccess {
+    border: 1px solid #2bbbad !important;
+}
+
+main .custom-select {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+main .form-control:focus,
+main .custom-select:focus {
+    background: #fff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25) !important;
+}
+
+#footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background: var(--grey-color);
+    border-top: 1px solid var(--color-tertiary);
+}
+
+#footer a {
+    color: var(--color-secondary);
+}
+
+.btn {
+    border-radius: 30px;
+}
+
+#subscriptionForm,
+#loginForm {
+    display: none;
+}
+
+#subscriptionForm.active,
+#loginForm.active {
+    display: block;
+}
+
+
+
+
+/***************************************************
+NAV PRINCIPAL
+***************************************************/
+#navPrincipal {
+    background: var(--orange-color);
+    height: 65px;
+    color: var(--grey-color);
+    z-index: 1040;
+}
+
+#navPrincipal .nav-item.active > .nav-link,
+#navPrincipal .nav-item > .nav-link:hover {
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+#navPrincipal .nav-link {
+    color: var(--grey-color);
+    font-size: 1rem;
+}
+
+#navPrincipal input.form-control {
+    color: var(--grey-color);
+    border-radius: 30px;
+    border: 2px solid;
+}
+
+#navPrincipal input.form-control:focus {
+    box-shadow: none;
+}
+
+#navPrincipal .navbar-toggler {
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+
+
+/***************************************************
+MEDIA QUERIES
+***************************************************/
+@media (max-width: 767px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    #navPrincipal {
+        height: auto;
+    }
+
+    #footer {
+        position: relative;
+        bottom: inherit;
+    }
+}

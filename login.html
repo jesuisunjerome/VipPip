@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Vip Pip - Login</title>
+
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="apple-touch-icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <nav id="navPrincipal" class="navbar navbar-expand z-depth-0 sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://image.flaticon.com/icons/svg/2965/2965323.svg" height="35" class="d-inline-block" alt="Vip Pip logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#baChache" aria-controls="baChache" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ri-menu-line"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="baChache">
+                <div class="md-form input-with-pre-icon my-0 ml-auto mr-2">
+                    <svg class="input-prefix" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.47675 12.4627L1.2645 15.6742L2.32575 16.7355L5.53725 13.5232C6.7322 14.4812 8.2185 15.0022 9.75 15C13.476 15 16.5 11.976 16.5 8.25C16.5 4.524 13.476 1.5 9.75 1.5C6.024 1.5 3 4.524 3 8.25C2.99782 9.7815 3.51884 11.2678 4.47675 12.4627ZM5.98125 11.9062C5.02942 10.9274 4.49785 9.61532 4.5 8.25C4.5 5.349 6.84975 3 9.75 3C12.651 3 15 5.349 15 8.25C15 11.1502 12.651 13.5 9.75 13.5C8.38468 13.5021 7.07259 12.9706 6.09375 12.0187L5.98125 11.9062Z" fill="#fff" />
+                    </svg>
+                    <input type="text" class="form-control py-1 m-0">
+                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blòg
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Konekte
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <div class="container-fluid text-center">
+            <section id="loginForm" class="active animated fadeIn slow">
+                <div class="row">
+                    <div class="col-md-5 py-5 d-flex align-items-center justify-content-center">
+                        <div class="w-75">
+                            <h2 class="font-weight-bold mb-4 animated bounce">
+                                Konekte sou VipPip
+                            </h2>
+                            <div class="form-group animated fadeInUp">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-mail-line input-prefix"></i>
+                                    <input type="email" class="form-control" required id="loginEmail" placeholder="Adrès imèl">
+                                </div>
+                            </div>
+                            <div class="form-group animated fadeInUp slow">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-lock-line input-prefix"></i>
+                                    <input type="password" class="form-control" required id="loginPassword" placeholder="Modpas">
+                                </div>
+                            </div>
+                            <a href="#" class="d-block mb-3 orange-color animated fadeInUp slow">
+                                Ou bliye modpas ou?
+                            </a>
+                            <button type="submit" class="btn bg-orange-color text-white btn-md animated fadeInUp">Konekte</button>
+                        </div>
+                    </div>
+                    <div class="col-md-7 px-0 d-flex align-items-center justify-content-center descForm" id="descKreyeKont">
+                        <div class="view">
+                            <img class="w-100" src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                            <div class="mask flex-center rgba-black-strong">
+                                <div class="w-75">
+                                    <h2 class="font-weight-bold mb-4 animated fadeInDown">
+                                        Lorem ipsum dolor amet!
+                                    </h2>
+                                    <p class="animated fadeInUp slow">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    </p>
+
+                                    <button onclick="kreyeKont()" class="btn text-white btn-md animated fadeInUp slow">
+                                        Kreye kont ou
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="subscriptionForm" class="animated fadeIn slow">
+                <div class="row">
+                    <div class="col-md-7 py-5 d-flex align-items-center justify-content-center descForm order-1 order-md-0">
+                        <div class="w-75">
+                            <h2 class="font-weight-bold mb-4 animated fadeInDown">
+                                Lorem ipsum dolor amet!
+                            </h2>
+                            <p class="animated fadeInUp slow">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Lorem ipsum dolor sit amet, consectetur adipiscing
+                            </p>
+
+                            <button onclick="konekteKounya()" class="btn text-white btn-md animated fadeInUp slow">
+                                Konekte kounya
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5 py-5 d-flex align-items-center justify-content-center">
+                        <div class="w-75">
+                            <h2 class="font-weight-bold mb-4 animated bounce">
+                                Kreye kont VipPip ou
+                            </h2>
+                            <div class="form-group animated fadeInUp faster">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-user-3-line input-prefix"></i>
+                                    <input class="form-control" required id="createFirstName" placeholder="Non">
+                                </div>
+                            </div>
+                            <div class="form-group animated fadeInUp faster">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-user-3-fill input-prefix"></i>
+                                    <input class="form-control" required id="createLastName" placeholder="Siyati">
+                                </div>
+                            </div>
+                            <div class="form-group animated fadeInUp fast">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-mail-line input-prefix"></i>
+                                    <input type="email" class="form-control" required id="createEmail" placeholder="Adrès imèl">
+                                </div>
+                            </div>
+                            <div class="form-group animated fadeInUp fast">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-lock-line input-prefix"></i>
+                                    <input type="password" class="form-control" required id="createPass" placeholder="Modpas">
+                                </div>
+                                <small id="passwordHelpBlock" class="form-text text-muted text-left">
+                                    Modpas la dwe genyen pou pi piti 8 karaktè: yon lèt majiskil ak yon nimewo.
+                                </small>
+                            </div>
+                            <div class="form-group animated fadeInUp slow">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-lock-fill input-prefix"></i>
+                                    <input type="password" class="form-control" required id="createConfPass" placeholder="Konfime modpas">
+                                </div>
+                                <small id="confPasswordHelpBlock" class="form-text text-danger d-none text-left">
+                                    Modpas la dwe menm bagay ak sa'w te ekri anlè a.
+                                </small>
+                            </div>
+                            <div class="form-group animated fadeInUp slow">
+                                <div class="md-form input-with-pre-icon mb-0">
+                                    <i class="ri-calendar-todo-line input-prefix"></i>
+                                    <input type="password" class="form-control" required id="createBirthday" placeholder="Dat ou fèt">
+                                </div>
+                            </div>
+                            <select class="browser-default custom-select mb-3 animated fadeInUp slower">
+                                <option selected disabled>Sèks</option>
+                                <option value="1">Fanm</option>
+                                <option value="2">Gason</option>
+                                <option value="3">Lot</option>
+                            </select>
+                            <button type="submit" class="btn bg-orange-color text-white btn-md animated fadeInUp">Kreye</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <section id="footer" class="py-4">
+            <div class="container-fluid text-center">
+                <ul class="nav justify-content-center">
+                    <a class="nav-link" href="#">Politik konfidansyalite</a>
+                    <a class="nav-link" href="#">Enfomasyon prive</a>
+                    <a class="nav-link" href="#">Plan yo</a>
+                    <a class="nav-link" href="#">Kontakte nou</a>
+                </ul>
+                <p class="mb-0">
+                    © Tout dwa rezeve - 2020 <a href="index.html">VipPip</a>
+                </p>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        function kreyeKont() {
+            $("#loginForm").removeClass("active");
+            $("#subscriptionForm").addClass("active");
+        }
+
+        function konekteKounya() {
+            $("#subscriptionForm").removeClass("active");
+            $("#loginForm").addClass("active");
+        }
+
+        $('#createPass, #createConfPass').on('keyup', function() {
+            var createPass = $('#createPass').val();
+            var confirmPass = $('#createConfPass').val();
+
+            if (!createPass && !confirmPass) {
+                $('#confPasswordHelpBlock').addClass("d-none").removeClass("d-block");
+                $("#createPass, #createConfPass").removeClass("activeSuccess").removeClass("activeDanger");
+            } else {
+                if (createPass == confirmPass) {
+                    $('#confPasswordHelpBlock').addClass("d-none").removeClass("d-block");
+                    $("#createPass, #createConfPass").removeClass("activeDanger").addClass("activeSuccess");
+                } else if (createPass != confirmPass) {
+                    $('#confPasswordHelpBlock').removeClass("d-none").addClass("d-block");
+                    $("#createPass, #createConfPass").removeClass("activeSuccess").addClass("activeDanger");
+                }
+            }
+        });
+    </script>
+
+
+</body></html>
